@@ -1,3 +1,4 @@
 *.sqlite
 *.pyc
 .bash_aliases
+.bash_aliases.backup
