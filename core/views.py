@@ -9,7 +9,7 @@ from django.core.context_processors import csrf
 def index(request):
     c = {}
     c.update(csrf(request))
-    return render_to_response('core/index.html', c)
+    return render_to_response('index.html', c)
 
 
 def redirect_original(request, short_id):
