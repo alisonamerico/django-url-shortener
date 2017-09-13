@@ -16,13 +16,12 @@ Including another URLconf
 
 from django.conf.urls import include, url
 from django.contrib import admin
-from core.views import index
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     # if the URL pattern match /admin/ then open up admin panel
-
-    #url(r'', include('core.urls',  namespace='shortenersite')),
-    url(r'^$', views.index, name='index'),
+    url(r'^$', include('core.urls',  namespace='core')),
+    #url(r'^$', views.index, name='index'),
     # if anything rather then /admin/ then it will look for shortenersite/urls
 ]
