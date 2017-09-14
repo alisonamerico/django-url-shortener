@@ -3,10 +3,20 @@ import random, string, json
 from core.models import Urls
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
+from django import forms
 
 
 def index(request):
     return render(request, 'index.html')
+
+
+def register(request):
+    form = UserModelForm(request.POST or None)
+    context = {'form':form}
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+    return render(request, 'register.html', context)
 
 
 def redirect_original(request, short_id):

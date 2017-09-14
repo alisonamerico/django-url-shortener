@@ -20,8 +20,6 @@ from core import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    # if the URL pattern match /admin/ then open up admin panel
     url(r'^', include('core.urls',  namespace='core')),
-    #url(r'^$', views.index, name='index'),
-    # if anything rather then /admin/ then it will look for shortenersite/urls
+    
 ]

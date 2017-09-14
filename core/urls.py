@@ -5,8 +5,16 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     # for our home/index page
 
+    url(r'^register$', register, name='register'),
+    # for our register page
+
+    #url(r'^login$', login, name='login'),
+    # for our login page
+
+    #url(r'^logout$', logout, name='logout'),
+    # for our logout page
+
     url(r'^short_id/$', redirect_original, name='redirectoriginal'),
-    #url(r'^(?P&lt;short_id&gt;\w{6})$', redirect_original, name='redirectoriginal'),
     # when short URL is requested it redirects to original URL
 
     url(r'^makeshort/$', shorten_url, name='shortenurl'),
