@@ -1,4 +1,4 @@
-from __future__ import unicode_literals
+
 
 from django.db import models
 
@@ -8,6 +8,10 @@ class Urls(models.Model):
     httpurl = models.URLField(max_length=200)
     pub_date = models.DateTimeField(auto_now=True)
     count = models.IntegerField(default=0)
+
+    class Meta:
+        verbose_name = 'Url'
+        verbose_name_plural = 'Urls'
 
 def __str__(self):
     return self.httpurl
