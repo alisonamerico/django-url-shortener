@@ -1,28 +1,38 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 import random, string, json
 from core.models import Urls
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
-from django import forms
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
+from core.forms import SignUpForm
 
 
+@login_required
 def index(request):
     return render(request, 'index.html')
 
 
-def register(request):
-    form = UserModelForm(request.POST or None)
-    context = {'form':form}
+def signup(request):
     if request.method == 'POST':
+        form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-    return render(request, 'register.html', context)
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('index')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/signup.html', {'form': form})
 
 
 def redirect_original(request, short_id):
     url = get_object_or_404(Urls, pk=short_id) # get object, if not found return 404 error
     url.count += 1
     url.save()
+    print(url.httpurl)
     return HttpResponseRedirect(url.httpurl)
 
 
