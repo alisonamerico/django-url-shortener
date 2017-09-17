@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^$', core_views.index, name='index'),
     # for our home/index page
     url(r'^login/$', auth_views.login, {'template_name': 'registration/login.html'}, name='login'),
-    url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
+    url(r'^logout/$', auth_views.logout, {'next_page': 'core:index'}, name='logout'),
     url(r'^signup/$', core_views.signup, name='signup'),
     url(r'^(?P<short_id>\w{6})$', redirect_original, name='redirectoriginal'),
     # when short URL is requested it redirects to original URL
