@@ -3,7 +3,7 @@ import random, string, json
 from core.models import Urls
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from core.forms import SignUpForm
 
@@ -14,7 +14,7 @@ def index(request):
 
 
 def signup(request):
-    if request.method == 'POST':
+    if request.method == 'POST'or None:
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
@@ -22,7 +22,7 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('index')
+            return redirect('core:login')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})

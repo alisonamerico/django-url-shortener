@@ -9,6 +9,8 @@ class Urls(models.Model):
     pub_date = models.DateTimeField(auto_now=True)
     count = models.IntegerField(default=0)
 
+    search_fields = ('short_id', 'httpurl', 'pub_date')
+
     class Meta:
         verbose_name = 'Url'
         verbose_name_plural = 'Urls'
