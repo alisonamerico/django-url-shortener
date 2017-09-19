@@ -3,28 +3,28 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>{% block title %}Welcome to mysite{% endblock %}</title>
 
+      <!--image background-->
+    <link rel="shortcut icon" href="{% static 'img/banner-bg.jpg' %}">
+
     <!--Bootstrap core CSS-->
-    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'assets/css/contact-input-style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/hover-effect.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}" />
-  </head>
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+      </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
 
 <nav class="navbar navbar-default top-bar affix" data-spy="affix" data-offset-top="250" >
-    <div class="container" >
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
             <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
@@ -39,11 +39,10 @@
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
 				          {% if user.is_authenticated %}
-                 <li><a href="{% url 'core:logout' %}">Logout</a></li>
+                 <li><a href="{% url 'core:logout' %}">LOGOUT</a></li>
                  <li><a href="">Welcome, {{ user.username }}!</a></li>
-
             </ul>
-			      <div class="col-sm-3 col-md-3 center">
+			      <div class="col-sm-3 col-md-3">
                  <form class="navbar-brand" role="search">
                      <div class="input-group">
                          <input type="text" class="form-control" placeholder="Search" name="q">
@@ -54,9 +53,9 @@
                  </form>
              </div>
              {% else %}
-                 <li><a href="{% url 'core:login' %}">Login</a></li>
+                 <li><a href="{% url 'core:login' %}">LOGIN</a></li>
 
-                 <li><a href="{% url 'core:signup' %}">Sign-up</a></li>
+                 <li><a href="{% url 'core:signup' %}">SIGN UP</a></li>
              {% endif %}
         </div>
         <!-- /.navbar-collapse -->
@@ -67,11 +66,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
-    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{% static 'assets/js/ie10-viewport-bug-workaround.js' %}"></script>
-    <script src="{% static 'assets/js/oppear_1.1.2.min.js' %}"></script>
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+    <script src="{% static 'js/oppear_1.1.2.min.js' %}"></script>
     <script type="text/javascript">
        $(function() {
            $('#submitButton').click(function() {

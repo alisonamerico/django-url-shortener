@@ -9,13 +9,18 @@
           <h1>Perfection is not attainable</h1>
           <h2>but if we chase perfection we can catch excellence</h2>
             <div class="input-group">
-                <input type="text" name="url" id="url" placeholder="search for" class="form-control"><span class="input-group-btn">
+                <input type="text" name="url" id="url"
+                placeholder="Pasta a link to shorten it" class="form-control">
+                <span class="input-group-btn">
                   {% csrf_token %}
-                <button id="submitButton" class="btn btn-search">Search</button>
+                <button id="submitButton" class="btn btn-search">SHORTEN</button>
                 </span>
             </div>
+
+            <div class="container">
+              <span id="url-result">Enter the URL above and click submit!</span>
+            </div>
       </div>
-      <div class="input-group">
-      <div class= "center"><span id="url-result">Enter the URL above and click submit!</span></div>
+
     </div>
 {% endblock %}
