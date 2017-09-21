@@ -1,8 +1,8 @@
 # Grow
 A simple URL shortener developed in Django
 
-.. image:: https://github.com/django-oscar/django-oscar/raw/master/docs/images/logos/oscar.png
-    :target: http://oscarcommerce.com
+.. image:: https://github.com/alisonamerico/django-url-shortener/tree/master/core/static/img/screenshot/screenshot.png
+
 
 ## Instalação
 
@@ -43,7 +43,7 @@ Successfully installed django-1.11
 ```
 
 
-3. Rode o comando abaixo para o Django criar novas migrações com base nas mudanças que você fez em seus modelos.):
+3. Rode o comando abaixo para o Django criar novas migrações com base nas mudanças que você fez em seus modelos:
 
 ```bash
 (.venv)$ python manage.py makemigrations
