@@ -43,21 +43,27 @@ Successfully installed django-1.11
 ```
 
 
-3. Rode o comando abaixo para o Django criar o banco local e executar as migrações que criamos:
+3. Rode o comando abaixo para o Django criar novas migrações com base nas mudanças que você fez em seus modelos.):
+
+```bash
+(.venv)$ python manage.py makemigrations
+```
+
+4. Rode o comando abaixo para aplicar e migrar as migrações:
 
 ```bash
 (.venv)$ python manage.py migrate
 ```
 
-4. Agora rode o projeto com o servidor embarcado:
+5. Agora rode o projeto com o servidor embarcado:
 
 ```bash
 (.venv)$ python manage.py runserver
 ```
 
-5. Acesse o sistema em `http://localhost:8000` e o painel do administrador em `http://localhost:8000/admin`
+6. Acesse o sistema em `http://localhost:8000` e o painel do administrador em `http://localhost:8000/admin`
 
-6. Para executar os testes automatizados, no caso da versão standalone:
+7. Para executar os testes automatizados, no caso da versão standalone:
 
 ```bash
 (.venv)$ python manage.py test
