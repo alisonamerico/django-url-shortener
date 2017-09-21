@@ -1,7 +1,7 @@
 # Grow
 A simple URL shortener developed in Django
 
-![Screenshot](https://github.com/alisonamerico/django-url-shortener/tree/master/core/static/img/screenshot/screenshot.png)
+![Alt Text](https://github.com/alisonamerico/django-url-shortener/tree/master/core/static/img/screenshot/screenshot.png)
 
 
 ## Instalação
