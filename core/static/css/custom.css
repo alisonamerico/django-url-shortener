@@ -17,7 +17,7 @@ a, a:hover, .btn{outline:none!important;}
 	}
 .row.no-gutter > [class^="col-"],
 .row.no-gutter > [class*=" col-"] {
-	
+
 	padding-right:0px;
 	padding-left:0px;
 }
@@ -30,8 +30,8 @@ section{padding:75px 0 100px;}
 .btn-submit {background: #5cb85c none repeat scroll 0 0; color: #fff; font-size: 20px; margin-top: 20px; padding: 7px 40px;}
 .btn-submit:hover {background:#3b8f3b; color:#fff}
 
- 
-/*-------------- Top Header --------------*/  
+
+/*-------------- Top Header --------------*/
 .navbar-default {
     background-color: transparent;
     border: medium none;
@@ -60,7 +60,7 @@ section{padding:75px 0 100px;}
 .navbar-default a.navbar-brand.dark{color:#0B5679;}
 .color-bg-nav{background:#1f2d3c; margin-top:0; padding:5px 0}
 
-/*-------------- Top Banner --------------*/  
+/*-------------- Top Banner --------------*/
 .banner-sec{height:100%; background:url(../img/banner-bg.jpg) no-repeat; background-size:cover;}
 .banner-sec .jumbotron{background:none;text-align:center; color:#fff; padding:100px;}
 .banner-sec .jumbotron p{font-size:19px;}
@@ -178,7 +178,7 @@ footer p{font-size:14px; font-weight:300; margin-bottom:0;}
 
 @media (max-width: 768px){
 
-h2 {}	
+h2 {}
 .banner-sec {height: 50vh;}
 .banner-sec h1 {font-size: 30px;}
 .banner-sec h2 {line-height: 36px; font-size:19px;}
@@ -192,5 +192,5 @@ h2 {}
 	p, .feature-section h3{text-align:center;}
 	.feature-section a{float:left; width:100%; text-align:center; margin-top:0;}
 	.f-small-block .small-inner{padding:0 20px}
-	
+
 }
