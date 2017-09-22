@@ -63,7 +63,7 @@ Successfully installed django-1.11
 (.venv)$ python manage.py runserver
 ```
 
-6. Acesse o sistema em `http://localhost:8000` e o painel do administrador em `http://localhost:8000/admin`
+6. Acesse o sistema em `http://localhost:8000` e o painel do administrador em `http://localhost:8000/admin`(para criar conta do administrador, execute o seguinte comando: `django-admin createsuperuser`)
 
 7. Para executar os testes automatizados, no caso da versão standalone:
 
