@@ -1,7 +1,9 @@
 # Grow
 A simple URL shortener developed in Django
 
-![Screenshot](screenshot.png)
+![Screenshot][1]
+
+[1]:https://github.com/alisonamerico/django-url-shortener/blob/master/core/static/img/screenshot/screenshot.png
 
 
 ## Instalação
