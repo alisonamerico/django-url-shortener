@@ -44,8 +44,6 @@ INSTALLED_APPS = [
     # libs
     'import_export',
 
-
-
 ]
 
 MIDDLEWARE = [
