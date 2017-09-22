@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'core',
     # libs
     'import_export',
-    
+
 
 
 ]
@@ -131,6 +131,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'core:index'
-
-
-#Default settings URL
