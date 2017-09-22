@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'core',
     # libs
     'import_export',
-    #'widget_tweaks',
+    
 
 
 ]
