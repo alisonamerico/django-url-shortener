@@ -4,11 +4,10 @@ from core.models import Urls
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.decorators import login_required
 from core.forms import SignUpForm
 from django.views.generic import ListView
 
-#@login_required
+
 def index(request):
     return render(request, 'index.html')
 
@@ -29,9 +28,15 @@ def signup(request):
 
 
 class SearchList(ListView):
-        template_name = 'search_list.html'
-        model = Urls
-        context_object = 'url'
+    template_name = 'search_list.html'
+    model = Urls
+    context_object = 'url'
+
+    def get_queryset(self):
+        if self.request.user.is_superuser:
+            return Urls.objects.all()
+        return Urls.objects.filter(user=self.request.user)
+
 
 
 def redirect_original(request, short_id):
@@ -46,7 +51,7 @@ def shorten_url(request):
     url = request.POST.get("url", '')
     if not (url == ''):
         short_id = get_short_code()
-        b = Urls(httpurl=url, short_id=short_id)
+        b = Urls(httpurl=url, short_id=short_id, user=request.user)
         b.save()
 
         response_data = {}

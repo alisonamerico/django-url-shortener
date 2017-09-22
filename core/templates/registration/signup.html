@@ -2,8 +2,9 @@
 
 {% block container %}
   <section class="banner-sec" id="home">
-      {# <div class="jumbotron">#}
-        <h2>Sign up</h2>
+    <div class="modal-dialog">
+      <div class="loginmodal-container">
+            <h1>Welcome! Please Sign up</h1><br>
         <form method="post">
           {% csrf_token %}
           {% for field in form %}
@@ -11,14 +12,13 @@
             {{ field.label_tag }}</br>
             {{ field }}
           </div>
-
-
-              {% for error in field.errors %}
-                <p style="color: red">{{ error }}</p>
-              {% endfor %}
+          {% for error in field.errors %}
+            <p style="color: red">{{ error }}</p>
+          {% endfor %}
 
           {% endfor %}
           <button type="submit">Sign up</button>
         </form>
       </div>
+    </div>
 {% endblock %}

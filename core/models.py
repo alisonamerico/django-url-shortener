@@ -1,6 +1,5 @@
-
-
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Urls(models.Model):
@@ -9,6 +8,7 @@ class Urls(models.Model):
     pub_date = models.DateTimeField(auto_now=True)
     count = models.IntegerField(default=0)
 
+    user = models.ForeignKey(User, null=True)
     search_fields = ('short_id', 'httpurl', 'pub_date')
 
     class Meta:
