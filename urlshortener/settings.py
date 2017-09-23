@@ -30,8 +30,6 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 
 
-# SITE_URL = config('SITE_URL')
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,6 +130,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'core:index'
-
-
-SITE_URL = 'http://localhost:8000'
