@@ -44,31 +44,43 @@ Installing collected packages: django
 Successfully installed django-1.11
 ```
 
-
-3. Rode o comando abaixo para o Django criar novas migrações com base nas mudanças que você fez em seus modelos:
-
-```bash
-(.venv)$ python manage.py makemigrations
-```
-
-4. Rode o comando abaixo para aplicar e migrar as migrações:
+3. Crie na pasta raiz do projeto um arquivo chamado ```bash .env ``` e insira
 
 ```bash
-(.venv)$ python manage.py migrate
+SECRET_KEY=VA_NUM_GERADOR_DE_SECRET_KEY_E_COLE_AQUI
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1, .localhost, .herokuapp.com
 ```
 
-5. Agora rode o projeto com o servidor embarcado:
+
+
+4. Agora rode o projeto com o servidor embarcado:
 
 ```bash
 (.venv)$ python manage.py runserver
 ```
 
-6. Acesse o sistema em `http://localhost:8000` e o painel do administrador em `http://localhost:8000/admin`(para criar conta do administrador, execute o seguinte comando: `python manage.py createsuperuser`)
+5. Acesse o sistema em `http://localhost:8000` e o painel do administrador em `http://localhost:8000/admin`(para criar conta do administrador, execute o seguinte comando: `python manage.py createsuperuser`)
 
-7. Para executar os testes automatizados, no caso da versão standalone:
+
+6. Para executar os testes automatizados, no caso da versão standalone:
 
 ```bash
 (.venv)$ python manage.py test
+```
+
+Caso posteriormente precise realizar mudanças no modelo, pode seguir esses comandos.Porém para instalação o passo a passo acima é suficiente.
+
+Rode o comando abaixo para o Django criar novas migrações com base nas mudanças que você fez em seus modelos:
+
+```bash
+(.venv)$ python manage.py makemigrations
+```
+
+Rode o comando abaixo para aplicar e migrar as migrações:
+
+```bash
+(.venv)$ python manage.py migrate
 ```
 
 ## Dúvidas ou problemas
