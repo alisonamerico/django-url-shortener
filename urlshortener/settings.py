@@ -30,7 +30,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 
 
-SITE_URL = config('SITE_URL')
+# SITE_URL = config('SITE_URL')
 
 # Application definition
 

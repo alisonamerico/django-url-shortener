@@ -6,6 +6,7 @@ from django.conf import settings
 from django.contrib.auth import login, logout, authenticate
 from core.forms import SignUpForm
 from django.views.generic import ListView
+from django.contrib.sites.shortcuts import get_current_site
 
 
 def index(request):
@@ -48,6 +49,8 @@ def redirect_original(request, short_id):
 
 
 def shorten_url(request):
+    current_site = get_current_site(request)
+    current_site.domain
     url = request.POST.get("url", '')
     if not (url == ''):
         short_id = get_short_code()
@@ -55,7 +58,8 @@ def shorten_url(request):
         b.save()
 
         response_data = {}
-        response_data['url'] = settings.SITE_URL + "/" + short_id
+        # response_data['url'] = settings.SITE_URL + "/" + short_id
+        response_data['url'] = current_site.domain + "/" + short_id
     return HttpResponse(json.dumps(response_data),  content_type="application/json")
     return HttpResponse(json.dumps({"error": "error occurs"}), content_type="application/json")
 
