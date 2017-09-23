@@ -133,8 +133,3 @@ LOGIN_REDIRECT_URL = 'core:index'
 
 
 SITE_URL = 'http://localhost:8000'
-PROD = 'https://grow-alison.herokuapp.com'
-if SITE_URL == PROD:
-    SITE_UR
-else:
-    PROD

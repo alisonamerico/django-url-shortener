@@ -59,7 +59,6 @@ def shorten_url(request):
         return HttpResponse(json.dumps(response_data),  content_type="application/json")
     return HttpResponse(json.dumps({"error": "error occurs"}), content_type="application/json")
 
-
 def get_short_code():
     length = 6
     char = string.ascii_uppercase + string.digits + string.ascii_lowercase
