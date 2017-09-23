@@ -56,8 +56,9 @@ def shorten_url(request):
 
         response_data = {}
         response_data['url'] = settings.SITE_URL + "/" + short_id
-        return HttpResponse(json.dumps(response_data),  content_type="application/json")
+    return HttpResponse(json.dumps(response_data),  content_type="application/json")
     return HttpResponse(json.dumps({"error": "error occurs"}), content_type="application/json")
+
 
 def get_short_code():
     length = 6
