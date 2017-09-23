@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 from core import views as core_views
 
 
+
 urlpatterns = [
 
     url(r'^$', core_views.index, name='index'),
