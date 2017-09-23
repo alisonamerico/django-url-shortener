@@ -130,3 +130,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'core:index'
+
+
+SITE_URL = 'http://localhost:8000'
+PROD = 'https://grow-alison.herokuapp.com'
+if SITE_URL == PROD:
+    SITE_UR
+else:
+    PROD
